@@ -1,0 +1,28 @@
+<h3>Book History for <%=@lib.name %></h3>
+<table>
+  <thead>
+  <tr>
+    <th colspan="5">Student Name</th>
+    <th colspan="5">Book Name</th>
+    <th colspan="5">Issue Date</th>
+    <th colspan="5">Return Date</th>
+    <th colspan="5">Overdue Date</th>
+  </tr>
+  </thead>
+  <tbody>
+  <% @hists.each do |hist| %>
+    <% hist.each do |h| %>
+      <tr>
+        <td colspan="5"> <%= Student.find(h.student_id).name %> </td>
+        <td colspan="5"> <%= Book.find(h.book_id).title %> </td>
+        <td colspan="5"> <%= h.issue_date %> </td>
+        <td colspan="5"> <%= h.return_date %> </td>
+        <td colspan="5"> <%= h.overdue_date %> </td>
+      </tr>
+
+    <% end %>
+  <% end %>
+  </tbody>
+</table>
+
+<%=link_to "Back to dashboard", librarians_path %>

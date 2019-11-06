@@ -1,0 +1,9 @@
+<h2>Book search</h2>
+
+<%= form_tag(displaysearch_path, :method => "get") do %>
+  <%= select_tag "search_by", options_for_select([ "title", "author", "subject", "publication date" ], "title") %>
+  <%= text_field_tag :search, nil, placeholder: "Search Query", :required => true %>
+  <%= submit_tag 'Search Books', name: nil %>
+<% end %>
+
+

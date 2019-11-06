@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  issue_date: 2019-09-29
+  return_date: 2019-09-29
+  overdue_date: 2019-09-29
+
+two:
+  issue_date: 2019-09-29
+  return_date: 2019-09-29
+  overdue_date: 2019-09-29

@@ -1,0 +1,21 @@
+<h1>Librarian </h1>
+
+<%= form_with(local: true) do |form| %>
+
+
+  <div class="field">
+    <%= form.label :Email %>
+    <%= form.text_field :email_field %>
+  </div>
+  <div class="field">
+    <%= form.label :Password %>
+    <%= form.text_field :password_field %>
+  </div>
+  <div class="actions">
+    <%= link_to '<button type="button">Sign In</button>'.html_safe, librarians_path %>
+    <%= link_to '<button type="button">Sign Up</button>'.html_safe, login_path %>
+  </div>
+
+<% end %>
+
+

@@ -1,0 +1,37 @@
+<%# <h1>Welcome#index</h1>
+<p>Find me in app/views/welcome/index.html.erb</p> %>
+
+<p class="navbar-text pull-right">
+  <% if librarian_signed_in? %>
+    Logged in as <strong> <%= current_librarian.email %></strong>.
+    <%= link_to "Logout", destroy_librarian_session_path, method: :delete, :class => 'navbar-link'  %>
+    <%end %>
+    </p>
+<p class="navbar-text pull-right">
+  <% if admin_signed_in? %>
+    Logged in as <strong> <%= current_admin.email %></strong>.
+    <%= link_to "Logout", destroy_admin_session_path, method: :delete, :class => 'navbar-link'  %>
+  <%end %>
+</p>
+<h2 align="center">Please select a user category</h2>
+
+
+<% if admin_signed_in? %>
+  <h3 align="center"><%= link_to 'Admin', admins_path %></h3>
+<% else %>
+  <h3 align="center"><%= link_to 'Admin', new_admin_session_path %></h3>
+<%end %>
+
+<% if librarian_signed_in? %>
+  <h3 align="center"><%= link_to 'Librarian', librarians_path %></h3>
+<% else %>
+  <h3 align="center"><%= link_to 'Librarian', new_librarian_session_path %></h3>
+<% end %>
+
+<% if student_signed_in? %>
+  <h3 align="center"><%= link_to 'Student', students_path %></h3>
+<% else %>
+  <h3 align="center"><%= link_to 'Student', new_student_session_path %></h3>
+<% end %>
+
+

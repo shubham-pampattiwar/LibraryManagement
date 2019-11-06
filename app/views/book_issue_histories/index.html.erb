@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Book Issue Histories</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Issue date</th>
+      <th>Return date</th>
+      <th>Overdue date</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @book_issue_histories.each do |book_issue_history| %>
+      <tr>
+        <td><%= book_issue_history.issue_date %></td>
+        <td><%= book_issue_history.return_date %></td>
+        <td><%= book_issue_history.overdue_date %></td>
+        <td><%= link_to 'Show', book_issue_history %></td>
+        <td><%= link_to 'Edit', edit_book_issue_history_path(book_issue_history) %></td>
+        <td><%= link_to 'Destroy', book_issue_history, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Book Issue History', new_book_issue_history_path %>

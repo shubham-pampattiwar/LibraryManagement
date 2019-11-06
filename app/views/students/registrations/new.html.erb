@@ -1,0 +1,73 @@
+<h2>Sign up</h2>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password %>
+    <% if @minimum_password_length %>
+      <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <% end %><br />
+    <%= f.password_field :password, autocomplete: "new-password" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :education_level %>
+    <%= f.label :bachelors, 'Bachelors' %>
+    <%= f.hidden_field :max_books_borrowed %>
+    <%= f.radio_button :education_level, 'Bachelors' %>
+    <%= f.label :masters, 'Masters' %>
+    <%= f.radio_button :education_level, 'Masters' %><br />
+    <%= f.label :masters, 'Phd' %>
+    <%= f.radio_button :education_level, 'Phd' %><br />
+  </div>
+
+  <div class="field">
+    <%= f.label :university %>
+    <%= select("student", "university_id", University.all.collect{ |c| [ c.name, c.id] }) %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Sign up" %>
+  </div>
+<% end %>
+
+<%= render "students/shared/links" %>
+<script type="text/javascript">
+    var rad = document.getElementsByName('student[education_level]');
+    var prev = null;
+    for (var i = 0; i < rad.length; i++) {
+        rad[i].addEventListener('change', function() {
+            if (this !== prev) {
+                prev = this;
+            }
+            education_level = this.value;
+            let max_books_borrowed = 0;
+            if(education_level == 'Bachelors'){
+                max_books_borrowed = 2;
+            }
+            else if(education_level == 'Masters'){
+                max_books_borrowed = 4;
+            }
+            else if(education_level == 'Phd'){
+                max_books_borrowed = 6;
+            }
+            document.getElementById('student_max_books_borrowed').value = max_books_borrowed;
+        });
+    }
+</script>

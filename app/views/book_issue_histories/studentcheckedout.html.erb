@@ -1,0 +1,24 @@
+<h3>Checked out books</h3>
+<table>
+  <thead>
+  <tr>
+    <th colspan="3">Student </th>
+    <th colspan="3">Book </th>
+    <th colspan="3">Issue Date </th>
+    <th colspan="3">Overdue Fine </th>
+  </tr>
+  </thead>
+  <tbody>
+  <% @overduefines.zip(@book_issue_hist).each do |hash,hist| %>
+      <tr>
+        <td colspan="3"> <%= Student.find(hist.student_id).name %> </td>
+        <td colspan="3"> <%= Book.find(hist.book_id).title %> </td>
+        <td colspan="3"> <%= hist.issue_date %> </td>
+        <td colspan="3"><%= hash[:fine_value] %></td>
+        <td colspan="3"><%= link_to 'Show Student details', Student.find(hist.student_id) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%=link_to "Back", root_path %>

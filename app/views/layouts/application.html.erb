@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>LibraryManagement</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <h1 align='center'>Library Management System</h1>
+    <% unless current_page?(root_path)%>
+    <h3 align='center'> <%= link_to 'Home', root_path%> </h3>
+    <% end %>
+   <hr>    
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <% if notice %>
+      <p class="notice"><%= notice %></p>
+    <% end %>
+
+    <% if alert %>
+      <p class="alert"><%= alert %></p>
+    <% end %>
+  </head>
+
+  <style>
+.footer{ 
+       position: fixed;     
+       text-align: center;    
+       bottom: 0px; 
+       width: 100%;
+   }  
+</style>
+
+  <body>
+    <%= yield %>
+    <hr class='footer'>
+    <h3 class='footer'>Created by RubyPoetsSociety</h3>
+  </body>
+</html>

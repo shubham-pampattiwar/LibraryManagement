@@ -1,0 +1,18 @@
+<%= form_with(model: Librarian, local: true) do |form| %>
+<h2>Sign Up for Librarian</h2>
+
+  <div class="field">
+    <%= form.label 'Name' %>
+    <%= form.text_field :name_field %>
+  </div>
+  <div class="field">
+    <%= form.label 'Email ID' %>
+    <%= form.text_field :email_field %>
+  </div>
+  <div class="field">
+    <%= form.label 'Password' %>
+    <%= form.text_field :password_field %>
+  </div>
+
+
+<% end %>

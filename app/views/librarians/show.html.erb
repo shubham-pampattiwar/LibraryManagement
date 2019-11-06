@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @librarian.name %>
+<br>
+  <strong>Email ID:</strong>
+  <%= @librarian.email %>
+<br>
+  <strong>Library:</strong>
+  <%= Library.find(@librarian.library_id).name %>
+</p>
+
+<%= link_to 'Edit', edit_librarian_path(@librarian) %> |
+<%= link_to 'Back', librarians_path %>

@@ -1,0 +1,30 @@
+<!--<p id="notice"><%#= notice %></p>-->
+
+<p>
+  <strong>Name:</strong>
+  <%= @library.name %>
+</p>
+
+<p>
+  <strong>University:</strong>
+  <%= @university.name %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @library.location %>
+</p>
+
+<p>
+  <strong>Max days borrowed:</strong>
+  <%= @library.max_days_borrowed %>
+</p>
+
+<p>
+  <strong>Overdue Fines:</strong>
+  <%= @library.overdue_fines %>
+</p>
+
+
+<%= link_to 'Edit', edit_library_path(@library) %> |
+<%= link_to 'Back', libraries_path %>

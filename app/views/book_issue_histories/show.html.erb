@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Issue date:</strong>
+  <%= @book_issue_history.issue_date %>
+</p>
+
+<p>
+  <strong>Return date:</strong>
+  <%= @book_issue_history.return_date %>
+</p>
+
+<p>
+  <strong>Overdue date:</strong>
+  <%= @book_issue_history.overdue_date %>
+</p>
+
+<%= link_to 'Edit', edit_book_issue_history_path(@book_issue_history) %> |
+<%= link_to 'Back', book_issue_histories_path %>

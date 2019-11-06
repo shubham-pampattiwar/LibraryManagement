@@ -1,0 +1,10 @@
+<h2>Your Libraries</h2>
+
+<table>
+  <tbody>
+    <th><%= 'Libraries available:' %></th>
+    <% @student_libraries.each do |student_libraries| %>
+      <td><%= student_libraries.name %></td>
+    <% end %>
+  </tbody>
+</table>

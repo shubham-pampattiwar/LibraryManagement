@@ -1,0 +1,64 @@
+<!--<p id="notice"><%#= notice %></p>-->
+
+<%= form_for @book, html: { multipart: true } do |f| %>
+  <p>
+    <label>Cover Image</label>
+    <%= image_tag @book.cover_image.url if @book.cover_image? %>
+  </p>
+<% end %>
+
+
+<p>
+  <strong>Title:</strong>
+  <%= @book.title %>
+</p>
+
+<p>
+  <strong>ISBN:</strong>
+  <%= @book.isbn %>
+</p>
+
+<p>
+  <strong>Author:</strong>
+  <%= @book.author %>
+</p>
+
+<p>
+  <strong>Language:</strong>
+  <%= @book.language %>
+</p>
+
+<p>
+  <strong>Published Date:</strong>
+  <%= @book.published %>
+</p>
+
+<p>
+  <strong>Edition:</strong>
+  <%= @book.edition %>
+</p>
+
+<p>
+  <strong>Library:</strong>
+  <%= @library.name %>
+</p>
+
+<p>
+  <strong>Subject:</strong>
+  <%= @book.subject %>
+</p>
+
+<p>
+  <strong>Summary:</strong>
+  <%= @book.summary %>
+</p>
+
+<p>
+  <strong>Special Collection:</strong>
+  <%= @book.special_collection %>
+</p>
+
+<% if admin_signed_in? or librarian_signed_in? %>
+<%= link_to 'Edit', edit_book_path(@book) %> |
+<%end %>
+<%= link_to 'Back', welcome_index_path %>

@@ -1,0 +1,425 @@
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ /Users/shubham/.rbenv/versions/2.6.4/bin/rake:23
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ /Users/shubham/.rbenv/versions/2.6.4/bin/rake:23
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ /Users/shubham/.rbenv/versions/2.6.4/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/shubham/.rbenv/versions/2.6.4/bin/rake:23
+Migrating to CreateLibraries (20190922040520)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/shubham/.rbenv/versions/2.6.4/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "libraries" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190922040520_create_libraries.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190922040520"]]
+  ↳ /Users/shubham/.rbenv/versions/2.6.4/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/shubham/.rbenv/versions/2.6.4/bin/rake:23
+Migrating to CreateAdmins (20190922040537)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/shubham/.rbenv/versions/2.6.4/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "admins" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190922040537_create_admins.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190922040537"]]
+  ↳ /Users/shubham/.rbenv/versions/2.6.4/bin/rake:23
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/shubham/.rbenv/versions/2.6.4/bin/rake:23
+Migrating to CreateStudents (20190922040555)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/shubham/.rbenv/versions/2.6.4/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "students" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190922040555_create_students.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190922040555"]]
+  ↳ /Users/shubham/.rbenv/versions/2.6.4/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/shubham/.rbenv/versions/2.6.4/bin/rake:23
+Migrating to CreateLibrarians (20190922040624)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/shubham/.rbenv/versions/2.6.4/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "librarians" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190922040624_create_librarians.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190922040624"]]
+  ↳ /Users/shubham/.rbenv/versions/2.6.4/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/shubham/.rbenv/versions/2.6.4/bin/rake:23
+Migrating to CreateBooks (20190922040644)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/shubham/.rbenv/versions/2.6.4/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "books" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190922040644_create_books.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190922040644"]]
+  ↳ /Users/shubham/.rbenv/versions/2.6.4/bin/rake:23
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/shubham/.rbenv/versions/2.6.4/bin/rake:23
+Migrating to AddAdminAttributes (20190922225730)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/shubham/.rbenv/versions/2.6.4/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "admins" ADD "email" varchar[0m
+  ↳ db/migrate/20190922225730_add_admin_attributes.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "admins" ADD "password" varchar[0m
+  ↳ db/migrate/20190922225730_add_admin_attributes.rb:4
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190922225730"]]
+  ↳ /Users/shubham/.rbenv/versions/2.6.4/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/shubham/.rbenv/versions/2.6.4/bin/rake:23
+Migrating to AddFieldsToBooks (20190923034338)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/shubham/.rbenv/versions/2.6.4/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "books" ADD "isbn" varchar[0m
+  ↳ db/migrate/20190923034338_add_fields_to_books.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "books" ADD "author" varchar[0m
+  ↳ db/migrate/20190923034338_add_fields_to_books.rb:4
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "books" ADD "language" varchar[0m
+  ↳ db/migrate/20190923034338_add_fields_to_books.rb:5
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "books" ADD "published" date[0m
+  ↳ db/migrate/20190923034338_add_fields_to_books.rb:6
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "books" ADD "edition" integer[0m
+  ↳ db/migrate/20190923034338_add_fields_to_books.rb:7
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "books" ADD "cover_image" varchar[0m
+  ↳ db/migrate/20190923034338_add_fields_to_books.rb:8
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "books" ADD "subject" varchar[0m
+  ↳ db/migrate/20190923034338_add_fields_to_books.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "books" ADD "summary" text[0m
+  ↳ db/migrate/20190923034338_add_fields_to_books.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "books" ADD "special_collection" boolean[0m
+  ↳ db/migrate/20190923034338_add_fields_to_books.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "books" ADD "quantity" integer[0m
+  ↳ db/migrate/20190923034338_add_fields_to_books.rb:12
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190923034338"]]
+  ↳ /Users/shubham/.rbenv/versions/2.6.4/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/shubham/.rbenv/versions/2.6.4/bin/rake:23
+Migrating to AddFieldsToLibraries (20190923034359)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/shubham/.rbenv/versions/2.6.4/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "libraries" ADD "location" varchar[0m
+  ↳ db/migrate/20190923034359_add_fields_to_libraries.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "libraries" ADD "max_days_borrowed" integer[0m
+  ↳ db/migrate/20190923034359_add_fields_to_libraries.rb:4
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "libraries" ADD "overdue_fines" float[0m
+  ↳ db/migrate/20190923034359_add_fields_to_libraries.rb:5
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190923034359"]]
+  ↳ /Users/shubham/.rbenv/versions/2.6.4/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/shubham/.rbenv/versions/2.6.4/bin/rake:23
+Migrating to AddColumnsToStudent (20190923035106)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/shubham/.rbenv/versions/2.6.4/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "students" ADD "email" varchar[0m
+  ↳ db/migrate/20190923035106_add_columns_to_student.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "students" ADD "password" varchar[0m
+  ↳ db/migrate/20190923035106_add_columns_to_student.rb:4
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "students" ADD "education_level" varchar[0m
+  ↳ db/migrate/20190923035106_add_columns_to_student.rb:5
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "students" ADD "max_days_borrowed" integer[0m
+  ↳ db/migrate/20190923035106_add_columns_to_student.rb:6
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190923035106"]]
+  ↳ /Users/shubham/.rbenv/versions/2.6.4/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/shubham/.rbenv/versions/2.6.4/bin/rake:23
+Migrating to AddColumsToLibrarians (20190923044429)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/shubham/.rbenv/versions/2.6.4/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "librarians" ADD "email" varchar[0m
+  ↳ db/migrate/20190923044429_add_colums_to_librarians.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "librarians" ADD "password" varchar[0m
+  ↳ db/migrate/20190923044429_add_colums_to_librarians.rb:4
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "librarians" ADD "library_id" integer[0m
+  ↳ db/migrate/20190923044429_add_colums_to_librarians.rb:5
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_librarians_on_library_id" ON "librarians" ("library_id")[0m
+  ↳ db/migrate/20190923044429_add_colums_to_librarians.rb:5
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190923044429"]]
+  ↳ /Users/shubham/.rbenv/versions/2.6.4/bin/rake:23
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/shubham/.rbenv/versions/2.6.4/bin/rake:23
+Migrating to AddDeviseToLibrarians (20190925014329)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/shubham/.rbenv/versions/2.6.4/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "librarians" ADD "encrypted_password" varchar DEFAULT '' NOT NULL[0m
+  ↳ db/migrate/20190925014329_add_devise_to_librarians.rb:7
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "librarians" ADD "reset_password_token" varchar[0m
+  ↳ db/migrate/20190925014329_add_devise_to_librarians.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "librarians" ADD "reset_password_sent_at" datetime[0m
+  ↳ db/migrate/20190925014329_add_devise_to_librarians.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "librarians" ADD "remember_created_at" datetime[0m
+  ↳ db/migrate/20190925014329_add_devise_to_librarians.rb:14
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_librarians_on_email" ON "librarians" ("email")[0m
+  ↳ db/migrate/20190925014329_add_devise_to_librarians.rb:39
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_librarians_on_reset_password_token" ON "librarians" ("reset_password_token")[0m
+  ↳ db/migrate/20190925014329_add_devise_to_librarians.rb:40
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190925014329"]]
+  ↳ /Users/shubham/.rbenv/versions/2.6.4/bin/rake:23
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/shubham/.rbenv/versions/2.6.4/bin/rake:23
+Migrating to CreateUniversities (20190926185441)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/shubham/.rbenv/versions/2.6.4/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "universities" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190926185441_create_universities.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190926185441"]]
+  ↳ /Users/shubham/.rbenv/versions/2.6.4/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/shubham/.rbenv/versions/2.6.4/bin/rake:23
+Migrating to AddDeviseToAdmins (20190928010147)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/shubham/.rbenv/versions/2.6.4/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "admins" ADD "encrypted_password" varchar DEFAULT '' NOT NULL[0m
+  ↳ db/migrate/20190928010147_add_devise_to_admins.rb:8
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "admins" ADD "reset_password_token" varchar[0m
+  ↳ db/migrate/20190928010147_add_devise_to_admins.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "admins" ADD "reset_password_sent_at" datetime[0m
+  ↳ db/migrate/20190928010147_add_devise_to_admins.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "admins" ADD "remember_created_at" datetime[0m
+  ↳ db/migrate/20190928010147_add_devise_to_admins.rb:15
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_admins_on_reset_password_token" ON "admins" ("reset_password_token")[0m
+  ↳ db/migrate/20190928010147_add_devise_to_admins.rb:41
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190928010147"]]
+  ↳ /Users/shubham/.rbenv/versions/2.6.4/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/shubham/.rbenv/versions/2.6.4/bin/rake:23
+Migrating to AddDeviseToStudents (20190928023651)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/shubham/.rbenv/versions/2.6.4/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "students" ADD "encrypted_password" varchar DEFAULT '' NOT NULL[0m
+  ↳ db/migrate/20190928023651_add_devise_to_students.rb:8
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "students" ADD "reset_password_token" varchar[0m
+  ↳ db/migrate/20190928023651_add_devise_to_students.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "students" ADD "reset_password_sent_at" datetime[0m
+  ↳ db/migrate/20190928023651_add_devise_to_students.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "students" ADD "remember_created_at" datetime[0m
+  ↳ db/migrate/20190928023651_add_devise_to_students.rb:15
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_students_on_email" ON "students" ("email")[0m
+  ↳ db/migrate/20190928023651_add_devise_to_students.rb:40
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_students_on_reset_password_token" ON "students" ("reset_password_token")[0m
+  ↳ db/migrate/20190928023651_add_devise_to_students.rb:41
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190928023651"]]
+  ↳ /Users/shubham/.rbenv/versions/2.6.4/bin/rake:23
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/shubham/.rbenv/versions/2.6.4/bin/rake:23
+Migrating to AddForeignKeyToStudents (20190928031600)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/shubham/.rbenv/versions/2.6.4/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "students" ADD "university_id" integer[0m
+  ↳ db/migrate/20190928031600_add_foreign_key_to_students.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_students_on_university_id" ON "students" ("university_id")[0m
+  ↳ db/migrate/20190928031600_add_foreign_key_to_students.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190928031600"]]
+  ↳ /Users/shubham/.rbenv/versions/2.6.4/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/shubham/.rbenv/versions/2.6.4/bin/rake:23
+Migrating to CreateBookmarks (20190928145159)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/shubham/.rbenv/versions/2.6.4/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "bookmarks" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190928145159_create_bookmarks.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190928145159"]]
+  ↳ /Users/shubham/.rbenv/versions/2.6.4/bin/rake:23
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/shubham/.rbenv/versions/2.6.4/bin/rake:23
+Migrating to AddColumnsToBookmarks (20190928145247)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/shubham/.rbenv/versions/2.6.4/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "bookmarks" ADD "student_id" integer[0m
+  ↳ db/migrate/20190928145247_add_columns_to_bookmarks.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_bookmarks_on_student_id" ON "bookmarks" ("student_id")[0m
+  ↳ db/migrate/20190928145247_add_columns_to_bookmarks.rb:3
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "bookmarks" ADD "book_id" integer[0m
+  ↳ db/migrate/20190928145247_add_columns_to_bookmarks.rb:4
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_bookmarks_on_book_id" ON "bookmarks" ("book_id")[0m
+  ↳ db/migrate/20190928145247_add_columns_to_bookmarks.rb:4
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190928145247"]]
+  ↳ /Users/shubham/.rbenv/versions/2.6.4/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/shubham/.rbenv/versions/2.6.4/bin/rake:23
+Migrating to AddApprovedToLibrarian (20190928215444)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/shubham/.rbenv/versions/2.6.4/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "librarians" ADD "approved" boolean DEFAULT 0 NOT NULL[0m
+  ↳ db/migrate/20190928215444_add_approved_to_librarian.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_librarians_on_approved" ON "librarians" ("approved")[0m
+  ↳ db/migrate/20190928215444_add_approved_to_librarian.rb:4
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190928215444"]]
+  ↳ /Users/shubham/.rbenv/versions/2.6.4/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/shubham/.rbenv/versions/2.6.4/bin/rake:23
+Migrating to CreateBookIssueHistories (20190929042149)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/shubham/.rbenv/versions/2.6.4/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "book_issue_histories" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "issue_date" date, "return_date" date, "overdue_date" date, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190929042149_create_book_issue_histories.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190929042149"]]
+  ↳ /Users/shubham/.rbenv/versions/2.6.4/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/shubham/.rbenv/versions/2.6.4/bin/rake:23
+Migrating to AddForeignKeysToBookIssueHistory (20190929042242)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/shubham/.rbenv/versions/2.6.4/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "book_issue_histories" ADD "student_id" integer[0m
+  ↳ db/migrate/20190929042242_add_foreign_keys_to_book_issue_history.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_book_issue_histories_on_student_id" ON "book_issue_histories" ("student_id")[0m
+  ↳ db/migrate/20190929042242_add_foreign_keys_to_book_issue_history.rb:3
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "book_issue_histories" ADD "library_id" integer[0m
+  ↳ db/migrate/20190929042242_add_foreign_keys_to_book_issue_history.rb:4
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_book_issue_histories_on_library_id" ON "book_issue_histories" ("library_id")[0m
+  ↳ db/migrate/20190929042242_add_foreign_keys_to_book_issue_history.rb:4
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "book_issue_histories" ADD "book_id" integer[0m
+  ↳ db/migrate/20190929042242_add_foreign_keys_to_book_issue_history.rb:5
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_book_issue_histories_on_book_id" ON "book_issue_histories" ("book_id")[0m
+  ↳ db/migrate/20190929042242_add_foreign_keys_to_book_issue_history.rb:5
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190929042242"]]
+  ↳ /Users/shubham/.rbenv/versions/2.6.4/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/shubham/.rbenv/versions/2.6.4/bin/rake:23
+Migrating to AddFkToBooks (20190929043015)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/shubham/.rbenv/versions/2.6.4/bin/rake:23
+  [1m[35m (0.8ms)[0m  [1m[35mALTER TABLE "books" ADD "library_id" integer[0m
+  ↳ db/migrate/20190929043015_add_fk_to_books.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_books_on_library_id" ON "books" ("library_id")[0m
+  ↳ db/migrate/20190929043015_add_fk_to_books.rb:3
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "libraries" ADD "university_id" integer[0m
+  ↳ db/migrate/20190929043015_add_fk_to_books.rb:4
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_libraries_on_university_id" ON "libraries" ("university_id")[0m
+  ↳ db/migrate/20190929043015_add_fk_to_books.rb:4
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190929043015"]]
+  ↳ /Users/shubham/.rbenv/versions/2.6.4/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/shubham/.rbenv/versions/2.6.4/bin/rake:23
+Migrating to CreateHoldRequests (20190929164032)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/shubham/.rbenv/versions/2.6.4/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "hold_requests" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190929164032_create_hold_requests.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190929164032"]]
+  ↳ /Users/shubham/.rbenv/versions/2.6.4/bin/rake:23
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/shubham/.rbenv/versions/2.6.4/bin/rake:23
+Migrating to AddColumnstoHoldRequests (20190929164449)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/shubham/.rbenv/versions/2.6.4/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "hold_requests" ADD "student_id" integer[0m
+  ↳ db/migrate/20190929164449_add_columnsto_hold_requests.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_hold_requests_on_student_id" ON "hold_requests" ("student_id")[0m
+  ↳ db/migrate/20190929164449_add_columnsto_hold_requests.rb:3
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "hold_requests" ADD "book_id" integer[0m
+  ↳ db/migrate/20190929164449_add_columnsto_hold_requests.rb:4
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_hold_requests_on_book_id" ON "hold_requests" ("book_id")[0m
+  ↳ db/migrate/20190929164449_add_columnsto_hold_requests.rb:4
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190929164449"]]
+  ↳ /Users/shubham/.rbenv/versions/2.6.4/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/shubham/.rbenv/versions/2.6.4/bin/rake:23
+Migrating to AddQueueNumberToHoldRequests (20190929172202)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/shubham/.rbenv/versions/2.6.4/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "hold_requests" ADD "queuenumber" integer[0m
+  ↳ db/migrate/20190929172202_add_queue_number_to_hold_requests.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190929172202"]]
+  ↳ /Users/shubham/.rbenv/versions/2.6.4/bin/rake:23
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/shubham/.rbenv/versions/2.6.4/bin/rake:23
+Migrating to AddApprovedToHoldRequests (20191002161228)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/shubham/.rbenv/versions/2.6.4/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "hold_requests" ADD "approved" boolean DEFAULT 0 NOT NULL[0m
+  ↳ db/migrate/20191002161228_add_approved_to_hold_requests.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_hold_requests_on_approved" ON "hold_requests" ("approved")[0m
+  ↳ db/migrate/20191002161228_add_approved_to_hold_requests.rb:4
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20191002161228"]]
+  ↳ /Users/shubham/.rbenv/versions/2.6.4/bin/rake:23
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/shubham/.rbenv/versions/2.6.4/bin/rake:23
+Migrating to RenameColumnInStudent (20191002193030)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/shubham/.rbenv/versions/2.6.4/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "astudents" ("id" integer NOT NULL PRIMARY KEY, "name" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "email" varchar DEFAULT NULL, "password" varchar DEFAULT NULL, "education_level" varchar DEFAULT NULL, "max_books_borrowed" integer DEFAULT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar DEFAULT NULL, "reset_password_sent_at" datetime DEFAULT NULL, "remember_created_at" datetime DEFAULT NULL, "university_id" integer DEFAULT NULL)[0m
+  ↳ db/migrate/20191002193030_rename_column_in_student.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "tindex_astudents_on_university_id" ON "astudents" ("university_id")[0m
+  ↳ db/migrate/20191002193030_rename_column_in_student.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "tindex_astudents_on_reset_password_token" ON "astudents" ("reset_password_token")[0m
+  ↳ db/migrate/20191002193030_rename_column_in_student.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "tindex_astudents_on_email" ON "astudents" ("email")[0m
+  ↳ db/migrate/20191002193030_rename_column_in_student.rb:3
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "astudents" ("id","name","created_at","updated_at","email","password","education_level","max_books_borrowed","encrypted_password","reset_password_token","reset_password_sent_at","remember_created_at","university_id")
+                     SELECT "id","name","created_at","updated_at","email","password","education_level","max_days_borrowed","encrypted_password","reset_password_token","reset_password_sent_at","remember_created_at","university_id" FROM "students"[0m
+  ↳ db/migrate/20191002193030_rename_column_in_student.rb:3
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "students"[0m
+  ↳ db/migrate/20191002193030_rename_column_in_student.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "students" ("id" integer NOT NULL PRIMARY KEY, "name" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "email" varchar DEFAULT NULL, "password" varchar DEFAULT NULL, "education_level" varchar DEFAULT NULL, "max_books_borrowed" integer DEFAULT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar DEFAULT NULL, "reset_password_sent_at" datetime DEFAULT NULL, "remember_created_at" datetime DEFAULT NULL, "university_id" integer DEFAULT NULL)[0m
+  ↳ db/migrate/20191002193030_rename_column_in_student.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_students_on_email" ON "students" ("email")[0m
+  ↳ db/migrate/20191002193030_rename_column_in_student.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_students_on_reset_password_token" ON "students" ("reset_password_token")[0m
+  ↳ db/migrate/20191002193030_rename_column_in_student.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_students_on_university_id" ON "students" ("university_id")[0m
+  ↳ db/migrate/20191002193030_rename_column_in_student.rb:3
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "students" ("id","name","created_at","updated_at","email","password","education_level","max_books_borrowed","encrypted_password","reset_password_token","reset_password_sent_at","remember_created_at","university_id")
+                     SELECT "id","name","created_at","updated_at","email","password","education_level","max_books_borrowed","encrypted_password","reset_password_token","reset_password_sent_at","remember_created_at","university_id" FROM "astudents"[0m
+  ↳ db/migrate/20191002193030_rename_column_in_student.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "astudents"[0m
+  ↳ db/migrate/20191002193030_rename_column_in_student.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20191002193030"]]
+  ↳ /Users/shubham/.rbenv/versions/2.6.4/bin/rake:23
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/shubham/.rbenv/versions/2.6.4/bin/rake:23
+Migrating to AddOmniauthToStudents (20191009210439)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/shubham/.rbenv/versions/2.6.4/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "students" ADD "provider" varchar[0m
+  ↳ db/migrate/20191009210439_add_omniauth_to_students.rb:3
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "students" ADD "uid" varchar[0m
+  ↳ db/migrate/20191009210439_add_omniauth_to_students.rb:4
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20191009210439"]]
+  ↳ /Users/shubham/.rbenv/versions/2.6.4/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/shubham/.rbenv/versions/2.6.4/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/shubham/.rbenv/versions/2.6.4/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/shubham/.rbenv/versions/2.6.4/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-11-03 07:42:46.493890"], ["updated_at", "2019-11-03 07:42:46.493890"]]
+  ↳ /Users/shubham/.rbenv/versions/2.6.4/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/shubham/.rbenv/versions/2.6.4/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/shubham/.rbenv/versions/2.6.4/bin/rake:23
+Started GET "/" for ::1 at 2019-11-03 02:43:17 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/shubham/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 392ms (Views: 380.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/favicon.ico" for ::1 at 2019-11-03 02:43:18 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
