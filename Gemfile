@@ -39,7 +39,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 
 # To add image from local system
-gem 'carrierwave', '~> 2.0'
+gem 'carrierwave', '~> 2.1'
 
 #Rspec gem
 gem 'rspec-rails'
